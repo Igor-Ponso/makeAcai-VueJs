@@ -85,5 +85,40 @@
       "tipo": "Cancelado"
     }
   ],
-  "pedidos": []
+  "pedidos": [
+    {
+      "name": "Igor Ponso",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Tomate",
+        "Cebola Roxa"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "name": "Vitão",
+      "carne": "Picanha",
+      "pao": "Integral",
+      "opcionais": [
+        "Cebola Roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "name": "Vitão",
+      "carne": "Picanha",
+      "pao": "Integral",
+      "opcionais": [
+        "Cebola Roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    }
+  ]
 }

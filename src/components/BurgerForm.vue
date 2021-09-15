@@ -2,7 +2,7 @@
   <div id="">
     <p>Componente de Mensagem</p>
     <div>
-      <form action="" id="burger-form">
+      <form action="" id="burger-form" @submit="createBurger">
         <div class="input-container">
           <label for="name">Nome</label>
           <input
@@ -14,40 +14,44 @@
           />
         </div>
         <div class="input-container">
-          <label for="pao">Escolha o Pao</label>
+          <label for="pao">Escolha o Pão</label>
           <select name="pao" id="pao" v-model="pao">
             <option value="" selected>Selecione seu pão</option>
-            <option value="Integral">Integral</option>
+            <option v-for="pao in paoList" :key="pao.id" :value="pao.tipo">{{
+              pao.tipo
+            }}</option>
           </select>
         </div>
         <div class="input-container">
           <label for="carne">Escolha a Carne do seu Burger</label>
           <select name="carne" id="carne" v-model="carne">
             <option value="" selected>Selecione seu Carne</option>
-            <option value="Maminha">Maminha</option>
+            <option
+              v-for="carne in carneList"
+              :key="carne.id"
+              :value="carne.tipo"
+            >
+              {{ carne.tipo }}
+            </option>
           </select>
         </div>
         <div class="input-container" id="opcionais-container">
           <label id="opcionais-title" for="opcionais">
-            Selecione os opcioais
+            Selecione os opcionais
           </label>
-          <div class="checkbox-container">
+          <div
+            class="checkbox-container"
+            v-for="opcional in opcionaisdata"
+            :key="opcional.id"
+            :value="opcional.tipo"
+          >
             <input
               type="checkbox"
               name="opcionais"
               v-model="opcionais"
-              value="salame"
+              :value="opcional.tipo"
             />
-            <span>Salame</span>
-          </div>
-          <div class="checkbox-container">
-            <input
-              type="checkbox"
-              name="opcionais"
-              v-model="opcionais"
-              value="salame"
-            />
-            <span>Salame</span>
+            <span>{{ opcional.tipo }}</span>
           </div>
         </div>
         <div class="input-container">
@@ -61,6 +65,52 @@
 <script>
 export default {
   name: "BurgerForm",
+  data() {
+    return {
+      paoList: null,
+      carneList: null,
+      opcionaisdata: null,
+      name: null,
+      pao: null,
+      carne: null,
+      opcionais: [],
+      msg: null,
+    };
+  },
+  methods: {
+    async getIngredients() {
+      const rq = await fetch("http://localhost:3000/ingredientes");
+      const data = await rq.json();
+
+      this.paoList = data.pao;
+      this.carneList = data.carne;
+      this.opcionaisdata = data.opcional;
+    },
+
+    async createBurger(e) {
+      e.preventDefault();
+      console.log("criando hamburguer");
+      const data = JSON.stringify({
+        name: this.name,
+        carne: this.carne,
+        pao: this.pao,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado",
+      });
+
+      const rq = await fetch("http://localhost:3000/pedidos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: data,
+      });
+
+      const res = await rq.json();
+      console.log(res);
+    },
+  },
+  mounted() {
+    this.getIngredients();
+  },
 };
 </script>
 
@@ -115,21 +165,20 @@ select {
   font-weight: bold;
 }
 
-.submit-btn{
-    background-color: #222;
-    color: #fcba03;
-    font-weight: bold;
-    border: 2px solid #222;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: .5s;
-    margin: 0 auto;
+.submit-btn {
+  background-color: #222;
+  color: #fcba03;
+  font-weight: bold;
+  border: 2px solid #222;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 0 auto;
 }
 
 .submit-btn:hover {
-    background-color: transparent;
-    color: #222;
+  background-color: transparent;
+  color: #222;
 }
-
 </style>

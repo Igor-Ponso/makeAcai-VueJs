@@ -30,12 +30,12 @@ export default {
 }
 
 #logo {
-  width: 40px;
+  width: 60px;
   height: 40px;
 }
 
 #nav a {
-  color: #fcba03;
+  color: #f561cd;
   text-decoration: none;
   margin: 12px;
   transition: 0.5s;

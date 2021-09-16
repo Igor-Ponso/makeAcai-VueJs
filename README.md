@@ -1,4 +1,4 @@
-# makeburguer-vuejs
+# makeacai-vuejs
 
 ## Project setup
 ```

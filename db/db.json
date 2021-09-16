@@ -1,65 +1,65 @@
 {
   "ingredientes": {
-    "pao": [
+    "tamanho": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "Pequeno - 300ml"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "Médio - 500ml"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "Grande - 750ml"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "Monstro - 1lt"
       }
     ],
-    "carne": [
+    "fruta": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "Morango"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "tipo": "Banana"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "Kiwi"
       },
       {
         "id": 4,
-        "tipo": "Veggie Burguer"
+        "tipo": "Manga"
       }
     ],
     "opcional": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "tipo": "Leite em Pó"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "tipo": "Creme de Paçoca"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "Sonho de Valsa"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "tipo": "Ovomaltine"
       },
       {
         "id": 5,
-        "tipo": "Cebola Roxa"
+        "tipo": "Nutella"
       },
       {
         "id": 6,
-        "tipo": "Pepino"
+        "tipo": "M&Ms"
       }
     ]
   },
@@ -88,49 +88,15 @@
   "pedidos": [
     {
       "name": "Igor Ponso",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
+      "fruta": "Morango",
+      "tamanho": "Grande - 750ml",
       "opcionais": [
-        "Bacon",
-        "Tomate",
-        "Cebola Roxa"
+        "Leite em Pó",
+        "Ovomaltine",
+        "Creme de Paçoca"
       ],
-      "status": "Solicitado",
+      "status": "Entregando",
       "id": 1
-    },
-    {
-      "name": "Vitão",
-      "carne": "Picanha",
-      "pao": "Integral",
-      "opcionais": [
-        "Cebola Roxa",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "name": "Vitão",
-      "carne": "Picanha",
-      "pao": "Integral",
-      "opcionais": [
-        "Cebola Roxa",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "name": "Igor Ponso",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Tomate",
-        "Cebola Roxa"
-      ],
-      "status": "Solicitado",
-      "id": 4
     }
   ]
 }

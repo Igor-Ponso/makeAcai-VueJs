@@ -1,6 +1,6 @@
 <template>
   <div id="main-banner">
-    <h1>Make Your Burger</h1>
+    <h1>Açaí Bow</h1>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 <style scoped>
 
   #main-banner{
-    background-image: url('/img/burger.jpg');
+    background-image: url('/img/acai.jpeg');
     background-size: cover;
     width: 100%;
     height: 500px;

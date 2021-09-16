@@ -88,27 +88,13 @@
   "pedidos": [
     {
       "name": "Igor Ponso",
-      "fruta": "Morango",
+      "fruta": "Banana",
       "tamanho": "Grande - 750ml",
       "opcionais": [
-        "Leite em Pó",
-        "Ovomaltine",
-        "Creme de Paçoca"
+        "Leite em Pó"
       ],
-      "status": "Entregando",
+      "status": "Solicitado",
       "id": 1
-    },
-    {
-      "name": "Teste 02",
-      "fruta": "Kiwi",
-      "tamanho": "Grande - 750ml",
-      "opcionais": [
-        "Leite em Pó",
-        "Ovomaltine",
-        "Nutella"
-      ],
-      "status": "Finalizado",
-      "id": 2
     }
   ]
 }

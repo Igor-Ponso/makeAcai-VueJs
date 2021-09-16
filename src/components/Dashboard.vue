@@ -11,10 +11,10 @@
         <div>Ações:</div>
       </div>
       <div id="pedido-table-rows">
-        <div v-show="burgers == null">Sem nenhum pedido</div>
+        <div v-show="pedidos == null">Sem nenhum pedido</div>
         <div
           class="pedido-table-row"
-          v-for="pedido in burgers"
+          v-for="pedido in pedidos"
           :key="pedido.id"
         >
           <div class="order-number">{{ pedido.id }}</div>
@@ -59,8 +59,8 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      burgers: null,
-      burger_id: null,
+      pedidos: null,
+      //pedido_id: null,
       status: [],
       msg: null,
     };
@@ -71,7 +71,8 @@ export default {
   methods: {
     async getPedidos() {
       const req = await fetch("http://localhost:3000/pedidos");
-      this.burgers = await req.json();
+      this.pedidos = await req.json();
+      console.log(pedidos);
 
       //resgatar os status
       this.getStatus();

@@ -25,10 +25,17 @@ npm install
 npm run serve
 ```
 
+### To simulate the BD.json
+```
+npm run backend
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
 ```
+
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -6,8 +6,10 @@ Ainda falta responsividade e também utilizar vuetify.
 
 Porém está funicional com um db json atualizando em tempo de execução.
 
-Primeiro projeto e com melhorias no UI/UX vindo no futuro.
+Todos os elementos do Form e selects estão sendo renderizados de opções pré-determinadas no arquivo db/db.json.
+Não existe elemento de Form 'hard coded'.
 
+Primeiro projeto e com melhorias no UI/UX vindo no futuro.
 
 
 ## Project setup

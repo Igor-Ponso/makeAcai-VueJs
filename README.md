@@ -2,6 +2,9 @@
 
 ## Intro
 Projeto de estudo usando Vue.js 3.
+
+Sistema para criação de Açaí pelo cliente e Dashboard para o Admin com atualização em tempo real dos pedidos e Status.
+
 Ainda falta responsividade e também utilizar vuetify.
 
 Porém está funicional com um db json atualizando em tempo de execução.

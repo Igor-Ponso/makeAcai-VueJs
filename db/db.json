@@ -97,6 +97,18 @@
       ],
       "status": "Entregando",
       "id": 1
+    },
+    {
+      "name": "Teste 02",
+      "fruta": "Kiwi",
+      "tamanho": "Grande - 750ml",
+      "opcionais": [
+        "Leite em Pó",
+        "Ovomaltine",
+        "Nutella"
+      ],
+      "status": "Finalizado",
+      "id": 2
     }
   ]
 }
